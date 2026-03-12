@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheQuantCloud — Quantum Computing as a Service</title>
+    <meta name="description" content="Develop, simulate, and deploy quantum applications on a unified cloud platform. Open-source QuantSDK with 50+ gates, framework interop, and multi-backend orchestration.">
+    <meta name="keywords" content="quantum computing, quantum cloud, quantum SDK, Qiskit, Cirq, PennyLane, quantum simulator, quantum backend">
+    <meta name="author" content="TheQuantAI">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="TheQuantCloud — Quantum Computing as a Service">
+    <meta property="og:description" content="Develop, simulate, and deploy quantum applications on a unified cloud platform.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thequantcloud.com">
+    <meta property="og:image" content="https://thequantcloud.com/assets/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TheQuantAI">
+    <meta name="twitter:title" content="TheQuantCloud — Quantum Computing as a Service">
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ─── Navigation ─── -->
+    <nav class="nav" id="nav">
+        <div class="container nav-inner">
+            <a href="/" class="nav-logo">
+                <img src="assets/logo-thequantcloud.svg" alt="TheQuantCloud" width="36" height="36">
+                <span>TheQuantCloud</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#features">Features</a>
+                <a href="#sdk">QuantSDK</a>
+                <a href="#backends">Backends</a>
+                <a href="#docs">Docs</a>
+                <a href="#pricing">Pricing</a>
+                <a href="https://github.com/TheQuantAI/quantsdk" target="_blank" rel="noopener" class="nav-github">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ─── Hero ─── -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-glow"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-badge">🚀 QuantSDK v0.1.0 — Open Source &amp; Ready</div>
+            <h1>Write Quantum Code.<br><span class="gradient-text">Run It Anywhere.</span></h1>
+            <p class="hero-subtitle">TheQuantCloud is the unified platform for quantum development — from writing your first qubit to deploying production circuits on real quantum hardware. Powered by the open-source QuantSDK.</p>
+            <div class="hero-actions">
+                <a href="https://docs.thequantcloud.com" class="btn btn-primary">
+                    <span>Read the Docs</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="https://github.com/TheQuantAI/quantsdk" class="btn btn-secondary" target="_blank" rel="noopener">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <span>Star on GitHub</span>
+                </a>
+            </div>
+            <div class="install-bar">
+                <code>pip install quantsdk</code>
+                <button class="copy-btn" title="Copy">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Features ─── -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Platform</span>
+                <h2>Everything you need for<br><span class="gradient-text">quantum development</span></h2>
+                <p class="section-desc">From your first quantum hello-world to production-grade circuit deployment, TheQuantCloud provides the complete development lifecycle.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card feature-card-large">
+                    <div class="feature-icon-lg">🧩</div>
+                    <h3>Framework Agnostic SDK</h3>
+                    <p>Write circuits once with our clean Python API. Export to Qiskit, Cirq, or OpenQASM when you need to. No vendor lock-in, ever.</p>
+                    <div class="feature-chip-row">
+                        <span class="chip">Qiskit</span>
+                        <span class="chip">Cirq</span>
+                        <span class="chip">PennyLane</span>
+                        <span class="chip">OpenQASM 2.0</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Local Simulator</h3>
+                    <p>High-performance tensor-based simulator for rapid prototyping. No network round-trips, no queue wait times.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3>Cloud Backends</h3>
+                    <p>Seamlessly switch from simulator to IBM Quantum, IonQ, and Rigetti hardware with a single parameter change.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>50+ Quantum Gates</h3>
+                    <p>Complete gate library — Pauli, Hadamard, Phase, T, CNOT, Toffoli, parameterized rotations, and custom unitaries.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Circuit Interop</h3>
+                    <p>Bidirectional conversion between QuantSDK, Qiskit circuits, and OpenQASM strings. Bring your existing code.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Rich Results</h3>
+                    <p>Structured measurement results with counts, probabilities, statevector access, and built-in visualization helpers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Fully Typed API</h3>
+                    <p>PEP 561 compliant with strict mypy checking. Your IDE autocomplete works perfectly — catch errors before runtime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── SDK Showcase ─── -->
+    <section class="section section-dark" id="sdk">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">QuantSDK</span>
+                <h2>Elegant by design</h2>
+                <p class="section-desc">Clean, Pythonic, and intuitive — QuantSDK gets out of your way so you can focus on the physics.</p>
+            </div>
+            <div class="sdk-showcase">
+                <!-- Tab 1: Bell State -->
+                <div class="sdk-tabs">
+                    <button class="sdk-tab active" data-tab="bell">Bell State</button>
+                    <button class="sdk-tab" data-tab="grover">Grover's Search</button>
+                    <button class="sdk-tab" data-tab="interop">Framework Interop</button>
+                </div>
+                <div class="sdk-panels">
+                    <div class="sdk-panel active" id="panel-bell">
+                        <div class="tech-code">
+                            <div class="code-header">
+                                <div class="code-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+                                <span class="code-title">bell_state.py</span>
+                            </div>
+                            <pre class="code-block"><code><span class="kw">import</span> <span class="mod">quantsdk</span> <span class="kw">as</span> <span class="mod">qs</span>
+
+<span class="cmt"># Create a Bell state — quantum entanglement in 3 lines</span>
+circuit = qs.Circuit(<span class="num">2</span>, name=<span class="str">"bell_state"</span>)
+circuit.h(<span class="num">0</span>)         <span class="cmt"># Superposition</span>
+circuit.cx(<span class="num">0</span>, <span class="num">1</span>)     <span class="cmt"># Entangle</span>
+circuit.measure_all()
+
+<span class="cmt"># Simulate locally</span>
+result = qs.run(circuit, shots=<span class="num">1024</span>)
+<span class="fn">print</span>(result.counts)
+<span class="cmt"># → {'00': 512, '11': 512}</span></code></pre>
+                        </div>
+                    </div>
+                    <div class="sdk-panel" id="panel-grover">
+                        <div class="tech-code">
+                            <div class="code-header">
+                                <div class="code-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+                                <span class="code-title">grover_search.py</span>
+                            </div>
+                            <pre class="code-block"><code><span class="kw">import</span> <span class="mod">quantsdk</span> <span class="kw">as</span> <span class="mod">qs</span>
+
+<span class="cmt"># Grover's algorithm — find |11⟩ in unsorted database</span>
+qc = qs.Circuit(<span class="num">2</span>, name=<span class="str">"grover"</span>)
+
+<span class="cmt"># Uniform superposition</span>
+qc.h(<span class="num">0</span>); qc.h(<span class="num">1</span>)
+
+<span class="cmt"># Oracle: mark |11⟩</span>
+qc.cz(<span class="num">0</span>, <span class="num">1</span>)
+
+<span class="cmt"># Diffusion operator</span>
+qc.h(<span class="num">0</span>); qc.h(<span class="num">1</span>)
+qc.z(<span class="num">0</span>); qc.z(<span class="num">1</span>)
+qc.cz(<span class="num">0</span>, <span class="num">1</span>)
+qc.h(<span class="num">0</span>); qc.h(<span class="num">1</span>)
+
+qc.measure_all()
+result = qs.run(qc, shots=<span class="num">1000</span>)
+<span class="fn">print</span>(result.counts)  <span class="cmt"># |11⟩ amplified!</span></code></pre>
+                        </div>
+                    </div>
+                    <div class="sdk-panel" id="panel-interop">
+                        <div class="tech-code">
+                            <div class="code-header">
+                                <div class="code-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+                                <span class="code-title">interop.py</span>
+                            </div>
+                            <pre class="code-block"><code><span class="kw">import</span> <span class="mod">quantsdk</span> <span class="kw">as</span> <span class="mod">qs</span>
+
+circuit = qs.Circuit(<span class="num">2</span>)
+circuit.h(<span class="num">0</span>)
+circuit.cx(<span class="num">0</span>, <span class="num">1</span>)
+
+<span class="cmt"># Export to Qiskit</span>
+qiskit_circ = circuit.to_qiskit()
+
+<span class="cmt"># Export to OpenQASM 2.0</span>
+qasm = circuit.to_openqasm()
+
+<span class="cmt"># Import from Qiskit</span>
+imported = qs.Circuit.from_qiskit(qiskit_circ)
+
+<span class="cmt"># Run on IBM Quantum hardware</span>
+result = qs.run(circuit,
+    backend=<span class="str">"ibm"</span>,
+    device=<span class="str">"ibm_brisbane"</span>,
+    shots=<span class="num">4096</span>
+)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Backends ─── -->
+    <section class="section" id="backends">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Backends</span>
+                <h2>One API, multiple quantum backends</h2>
+                <p class="section-desc">Write your circuit once and run it on any supported backend. Switch with a single parameter — no code changes required.</p>
+            </div>
+            <div class="backends-grid">
+                <div class="backend-card">
+                    <div class="backend-icon">💻</div>
+                    <h3>Local Simulator</h3>
+                    <p>Tensor-based statevector simulator. Instant results, no network required. Perfect for development and testing.</p>
+                    <span class="backend-status available">Available Now</span>
+                </div>
+                <div class="backend-card">
+                    <div class="backend-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#0F62FE"/><text x="16" y="21" text-anchor="middle" font-size="14" font-weight="700" fill="white">IBM</text></svg>
+                    </div>
+                    <h3>IBM Quantum</h3>
+                    <p>Access IBM's fleet of superconducting quantum processors. From 127-qubit Eagle to next-gen Heron chips.</p>
+                    <span class="backend-status available">Available Now</span>
+                </div>
+                <div class="backend-card">
+                    <div class="backend-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#4B0082"/><text x="16" y="21" text-anchor="middle" font-size="10" font-weight="700" fill="white">IonQ</text></svg>
+                    </div>
+                    <h3>IonQ</h3>
+                    <p>Trapped-ion quantum hardware with all-to-all connectivity. High gate fidelity for complex algorithms.</p>
+                    <span class="backend-status coming">Q2 2026</span>
+                </div>
+                <div class="backend-card">
+                    <div class="backend-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#00897B"/><text x="16" y="20" text-anchor="middle" font-size="8" font-weight="700" fill="white">Rigetti</text></svg>
+                    </div>
+                    <h3>Rigetti</h3>
+                    <p>Superconducting qubit systems with hybrid quantum-classical computing capabilities.</p>
+                    <span class="backend-status coming">Q2 2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Documentation ─── -->
+    <section class="section section-dark" id="docs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Documentation</span>
+                <h2>Docs that developers actually love</h2>
+                <p class="section-desc">30+ pages of guides, API reference, tutorials, and interactive notebooks. Everything you need from hello-world to production deployment.</p>
+            </div>
+            <div class="docs-grid">
+                <a href="https://docs.thequantcloud.com/getting-started/" class="doc-card">
+                    <div class="doc-icon">🚀</div>
+                    <h3>Getting Started</h3>
+                    <p>Install QuantSDK and build your first quantum circuit in under 5 minutes.</p>
+                </a>
+                <a href="https://docs.thequantcloud.com/api-reference/" class="doc-card">
+                    <div class="doc-icon">📖</div>
+                    <h3>API Reference</h3>
+                    <p>Complete reference for every class, method, and parameter. Auto-generated from docstrings.</p>
+                </a>
+                <a href="https://docs.thequantcloud.com/tutorials/" class="doc-card">
+                    <div class="doc-icon">📓</div>
+                    <h3>Tutorials</h3>
+                    <p>Step-by-step guides covering Bell states, Grover's algorithm, QFT, VQE, and more.</p>
+                </a>
+                <a href="https://docs.thequantcloud.com/examples/" class="doc-card">
+                    <div class="doc-icon">💡</div>
+                    <h3>22 Example Notebooks</h3>
+                    <p>Interactive Jupyter notebooks from basic gates to advanced algorithms. Copy, paste, and run.</p>
+                </a>
+                <a href="https://docs.thequantcloud.com/backends/" class="doc-card">
+                    <div class="doc-icon">🔌</div>
+                    <h3>Backend Guides</h3>
+                    <p>Set up and configure each quantum backend. Local simulator, IBM Quantum, and more.</p>
+                </a>
+                <a href="https://docs.thequantcloud.com/contributing/" class="doc-card">
+                    <div class="doc-icon">🤝</div>
+                    <h3>Contributing</h3>
+                    <p>Join 100% open-source development. Contribution guidelines, dev setup, and code standards.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Pricing ─── -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Pricing</span>
+                <h2>Free to start. Scale when ready.</h2>
+                <p class="section-desc">QuantSDK is and will always be 100% open-source. Cloud platform pricing coming with TheQuantCloud GA launch.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-tier">Open Source</div>
+                    <div class="pricing-price"><span class="price-amount">Free</span><span class="price-period">forever</span></div>
+                    <p class="pricing-desc">Everything you need for local quantum development.</p>
+                    <ul class="pricing-features">
+                        <li>✦ Full QuantSDK library</li>
+                        <li>✦ 50+ quantum gates</li>
+                        <li>✦ Local simulator</li>
+                        <li>✦ Framework interop (Qiskit, Cirq, OpenQASM)</li>
+                        <li>✦ 22 example notebooks</li>
+                        <li>✦ Community support via GitHub</li>
+                        <li>✦ Apache 2.0 License</li>
+                    </ul>
+                    <a href="https://github.com/TheQuantAI/quantsdk" class="btn btn-secondary" target="_blank" rel="noopener">Get Started Free</a>
+                </div>
+                <div class="pricing-card pricing-card-featured">
+                    <div class="pricing-tier">Cloud Platform</div>
+                    <div class="pricing-price"><span class="price-amount">Coming Soon</span></div>
+                    <p class="pricing-desc">Full cloud platform with managed backends, team features, and smart routing.</p>
+                    <ul class="pricing-features">
+                        <li>✦ Everything in Open Source</li>
+                        <li>✦ Managed quantum backends (IBM, IonQ, Rigetti)</li>
+                        <li>✦ QuantStudio web IDE</li>
+                        <li>✦ Intelligent backend routing</li>
+                        <li>✦ Team collaboration & sharing</li>
+                        <li>✦ Job queuing & monitoring</li>
+                        <li>✦ Priority support & SLA</li>
+                    </ul>
+                    <a href="mailto:saket@thequantai.in" class="btn btn-primary">Join Waitlist</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── CTA ─── -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-inner">
+                <h2>Start building quantum<br>applications today</h2>
+                <p>Install QuantSDK and run your first quantum circuit in under 60 seconds.</p>
+                <div class="cta-install">
+                    <code>pip install quantsdk</code>
+                    <button class="copy-btn" title="Copy">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                    </button>
+                </div>
+                <div class="cta-actions">
+                    <a href="https://docs.thequantcloud.com" class="btn btn-primary">Read the Docs</a>
+                    <a href="https://github.com/TheQuantAI/quantsdk" class="btn btn-secondary" target="_blank" rel="noopener">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Footer ─── -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo-thequantcloud.svg" alt="TheQuantCloud" width="32" height="32">
+                    <span>TheQuantCloud</span>
+                    <p>Quantum Computing as a Service — by <a href="https://thequantai.in" style="color:var(--violet-400);text-decoration:none;">TheQuantAI</a></p>
+                </div>
+                <div class="footer-col">
+                    <h5>Product</h5>
+                    <a href="#features">Features</a>
+                    <a href="#sdk">QuantSDK</a>
+                    <a href="#backends">Backends</a>
+                    <a href="#pricing">Pricing</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Resources</h5>
+                    <a href="https://docs.thequantcloud.com">Documentation</a>
+                    <a href="https://docs.thequantcloud.com/tutorials/">Tutorials</a>
+                    <a href="https://docs.thequantcloud.com/examples/">Examples</a>
+                    <a href="https://docs.thequantcloud.com/changelog/">Changelog</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Community</h5>
+                    <a href="https://github.com/TheQuantAI" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://discord.gg/TheQuantAI" target="_blank" rel="noopener">Discord</a>
+                    <a href="https://twitter.com/TheQuantAI" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://docs.thequantcloud.com/contributing/">Contributing</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Legal</h5>
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
+                    <a href="https://github.com/TheQuantAI/quantsdk/blob/main/LICENSE">License (Apache 2.0)</a>
+                    <a href="mailto:security@thequantai.in">Security</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TheQuantAI. All rights reserved.</p>
+                <p>Built with ❤️ in Bengaluru, India 🇮🇳</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
