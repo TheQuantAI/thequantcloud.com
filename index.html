@@ -39,6 +39,7 @@
             </a>
             <div class="nav-links" id="navLinks">
                 <a href="#features">Features</a>
+                <a href="#studio">QuantStudio</a>
                 <a href="#sdk">QuantSDK</a>
                 <a href="#backends">Backends</a>
                 <a href="#docs">Docs</a>
@@ -60,7 +61,7 @@
             <div class="hero-glow"></div>
         </div>
         <div class="container hero-content">
-            <div class="hero-badge">🚀 QuantSDK v0.1.0 — Open Source &amp; Ready</div>
+            <div class="hero-badge">🚀 QuantSDK v0.1.0 + QuantStudio IDE — Live Now</div>
             <h1>Write Quantum Code.<br><span class="gradient-text">Run It Anywhere.</span></h1>
             <p class="hero-subtitle">TheQuantCloud is the unified platform for quantum development — from writing your first qubit to deploying production circuits on real quantum hardware. Powered by the open-source QuantSDK.</p>
             <div class="hero-actions">
@@ -136,8 +137,62 @@
         </div>
     </section>
 
+    <!-- ─── QuantStudio ─── -->
+    <section class="section section-dark" id="studio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">🆕 Now Live</span>
+                <h2>QuantStudio — Quantum IDE<br><span class="gradient-text">in your browser</span></h2>
+                <p class="section-desc">A full-featured development environment for quantum computing. Write, run, visualize, and share quantum circuits — no local setup required.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card feature-card-large">
+                    <div class="feature-icon-lg">🖥️</div>
+                    <h3>Monaco Code Editor</h3>
+                    <p>VS Code's editor engine with QuantSDK autocomplete, Python syntax highlighting, and intelligent error messages. Write quantum code with the same editor millions of developers already love.</p>
+                    <div class="feature-chip-row">
+                        <span class="chip">Autocomplete</span>
+                        <span class="chip">Syntax Highlight</span>
+                        <span class="chip">Error Hints</span>
+                        <span class="chip">Dark Theme</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Live Visualization</h3>
+                    <p>SVG circuit diagrams, interactive result histograms, probability bars, and statistical analysis — all updated in real-time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>16 Circuit Templates</h3>
+                    <p>Bell states, Grover's search, QFT, VQE, QAOA, teleportation, quantum ML, and more. One-click load into the editor.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔌</div>
+                    <h3>8 Backend Adapters</h3>
+                    <p>Compare and select from CPU, GPU, IBM, IonQ, Rigetti, and Quantinuum backends with real-time status and metrics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <h3>Save & Load</h3>
+                    <p>Save your circuits, manage projects, and pick up right where you left off. Full CRUD with auth-protected storage.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📥</div>
+                    <h3>Export Results</h3>
+                    <p>Download results as JSON, CSV, or SVG. Export circuit diagrams for papers and presentations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Authentication</h3>
+                    <p>GitHub OAuth + email login via NextAuth. Your circuits are private by default, shareable when you're ready.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ─── SDK Showcase ─── -->
-    <section class="section section-dark" id="sdk">
+    <section class="section" id="sdk">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">QuantSDK</span>
@@ -239,39 +294,67 @@ result = qs.run(circuit,
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Backends</span>
-                <h2>One API, multiple quantum backends</h2>
-                <p class="section-desc">Write your circuit once and run it on any supported backend. Switch with a single parameter — no code changes required.</p>
+                <h2>8 backends, one unified API</h2>
+                <p class="section-desc">Write your circuit once and run it on any supported backend. Switch with a single parameter — from local CPU to trapped-ion QPU.</p>
             </div>
             <div class="backends-grid">
                 <div class="backend-card">
                     <div class="backend-icon">💻</div>
-                    <h3>Local Simulator</h3>
-                    <p>Tensor-based statevector simulator. Instant results, no network required. Perfect for development and testing.</p>
-                    <span class="backend-status available">Available Now</span>
+                    <h3>CPU Simulator</h3>
+                    <p>High-performance statevector simulator. Perfect fidelity, instant results, up to 25 qubits. Free tier.</p>
+                    <span class="backend-status available">✅ Available</span>
+                </div>
+                <div class="backend-card">
+                    <div class="backend-icon">⚡</div>
+                    <h3>GPU Simulator (cuQuantum)</h3>
+                    <p>NVIDIA GPU-accelerated simulation. 32+ qubits with tensor network contraction. Blazing fast.</p>
+                    <span class="backend-status available">✅ Available</span>
                 </div>
                 <div class="backend-card">
                     <div class="backend-icon">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#0F62FE"/><text x="16" y="21" text-anchor="middle" font-size="14" font-weight="700" fill="white">IBM</text></svg>
                     </div>
-                    <h3>IBM Quantum</h3>
-                    <p>Access IBM's fleet of superconducting quantum processors. From 127-qubit Eagle to next-gen Heron chips.</p>
-                    <span class="backend-status available">Available Now</span>
+                    <h3>IBM Brisbane</h3>
+                    <p>127-qubit superconducting Eagle processor. Heavy-hex connectivity, CX native gates.</p>
+                    <span class="backend-status available">✅ Available</span>
                 </div>
                 <div class="backend-card">
                     <div class="backend-icon">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#4B0082"/><text x="16" y="21" text-anchor="middle" font-size="10" font-weight="700" fill="white">IonQ</text></svg>
                     </div>
-                    <h3>IonQ</h3>
-                    <p>Trapped-ion quantum hardware with all-to-all connectivity. High gate fidelity for complex algorithms.</p>
-                    <span class="backend-status coming">Q2 2026</span>
+                    <h3>IonQ Harmony</h3>
+                    <p>11-qubit trapped-ion QPU. All-to-all connectivity, 99.5% fidelity. GPI/GPI2/MS native gates.</p>
+                    <span class="backend-status available">✅ Available</span>
+                </div>
+                <div class="backend-card">
+                    <div class="backend-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#4B0082"/><text x="16" y="21" text-anchor="middle" font-size="10" font-weight="700" fill="white">IonQ</text></svg>
+                    </div>
+                    <h3>IonQ Aria</h3>
+                    <p>25-qubit trapped-ion QPU. Next-gen fidelity at 99.7%, ideal for complex variational algorithms.</p>
+                    <span class="backend-status available">✅ Available</span>
                 </div>
                 <div class="backend-card">
                     <div class="backend-icon">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#00897B"/><text x="16" y="20" text-anchor="middle" font-size="8" font-weight="700" fill="white">Rigetti</text></svg>
                     </div>
-                    <h3>Rigetti</h3>
-                    <p>Superconducting qubit systems with hybrid quantum-classical computing capabilities.</p>
-                    <span class="backend-status coming">Q2 2026</span>
+                    <h3>Rigetti Ankaa-2</h3>
+                    <p>84-qubit superconducting processor. Square-lattice connectivity, CZ/RZ/RX native gates.</p>
+                    <span class="backend-status available">✅ Available</span>
+                </div>
+                <div class="backend-card">
+                    <div class="backend-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#C62828"/><text x="16" y="20" text-anchor="middle" font-size="6" font-weight="700" fill="white">Q’nuum</text></svg>
+                    </div>
+                    <h3>Quantinuum H1-1</h3>
+                    <p>20-qubit trapped-ion QPU. Industry-leading 99.8% fidelity. All-to-all connectivity.</p>
+                    <span class="backend-status available">✅ Available</span>
+                </div>
+                <div class="backend-card">
+                    <div class="backend-icon">🎲</div>
+                    <h3>Noisy Simulator</h3>
+                    <p>Configurable noise model simulator. Test how your circuits perform under realistic error conditions.</p>
+                    <span class="backend-status available">✅ Available</span>
                 </div>
             </div>
         </div>
@@ -283,7 +366,7 @@ result = qs.run(circuit,
             <div class="section-header">
                 <span class="section-tag">Documentation</span>
                 <h2>Docs that developers actually love</h2>
-                <p class="section-desc">30+ pages of guides, API reference, tutorials, and interactive notebooks. Everything you need from hello-world to production deployment.</p>
+                <p class="section-desc">30+ pages of guides, API reference, tutorials, and interactive notebooks. 658 tests guard every release.</p>
             </div>
             <div class="docs-grid">
                 <a href="https://docs.thequantcloud.com/getting-started/" class="doc-card">
@@ -346,18 +429,18 @@ result = qs.run(circuit,
                 </div>
                 <div class="pricing-card pricing-card-featured">
                     <div class="pricing-tier">Cloud Platform</div>
-                    <div class="pricing-price"><span class="price-amount">Coming Soon</span></div>
-                    <p class="pricing-desc">Full cloud platform with managed backends, team features, and smart routing.</p>
+                    <div class="pricing-price"><span class="price-amount">Early Access</span></div>
+                    <p class="pricing-desc">Full cloud platform with managed backends, team features, and smart routing. Launching Q3 2026.</p>
                     <ul class="pricing-features">
                         <li>✦ Everything in Open Source</li>
-                        <li>✦ Managed quantum backends (IBM, IonQ, Rigetti)</li>
-                        <li>✦ QuantStudio web IDE</li>
-                        <li>✦ Intelligent backend routing</li>
+                        <li>✦ QuantStudio web IDE (live now)</li>
+                        <li>✦ 8 managed quantum backends</li>
+                        <li>✦ Intelligent backend routing (QuantRouter)</li>
                         <li>✦ Team collaboration & sharing</li>
                         <li>✦ Job queuing & monitoring</li>
                         <li>✦ Priority support & SLA</li>
                     </ul>
-                    <a href="mailto:saket@thequantai.in" class="btn btn-primary">Join Waitlist</a>
+                    <a href="mailto:saket@thequantai.in" class="btn btn-primary">Request Early Access</a>
                 </div>
             </div>
         </div>
