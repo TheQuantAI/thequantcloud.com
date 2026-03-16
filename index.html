@@ -61,13 +61,16 @@
             <div class="hero-glow"></div>
         </div>
         <div class="container hero-content">
-            <div class="hero-badge">🚀 QuantSDK v0.1.0 + QuantStudio IDE — Live Now</div>
+            <div class="hero-badge">☁️ TheQuantCloud Beta — Free Quantum Computing in the Cloud</div>
             <h1>Write Quantum Code.<br><span class="gradient-text">Run It Anywhere.</span></h1>
-            <p class="hero-subtitle">TheQuantCloud is the unified platform for quantum development — from writing your first qubit to deploying production circuits on real quantum hardware. Powered by the open-source QuantSDK.</p>
+            <p class="hero-subtitle">TheQuantCloud is the unified platform for quantum development — from writing your first qubit to running circuits on cloud simulators and real quantum hardware. Sign up for free beta access with $50 in credits.</p>
             <div class="hero-actions">
-                <a href="https://studio.thequantcloud.com" class="btn btn-primary" target="_blank" rel="noopener">
-                    <span>Try QuantStudio</span>
+                <a href="https://studio.thequantcloud.com/signup" class="btn btn-primary" target="_blank" rel="noopener">
+                    <span>Try Beta Free</span>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="https://studio.thequantcloud.com" class="btn btn-secondary" target="_blank" rel="noopener">
+                    <span>Open QuantStudio</span>
                 </a>
                 <a href="https://docs.thequantcloud.com" class="btn btn-secondary">
                     <span>Read the Docs</span>
@@ -187,8 +190,8 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔐</div>
-                    <h3>Authentication</h3>
-                    <p>GitHub OAuth + email login via NextAuth. Your circuits are private by default, shareable when you're ready.</p>
+                    <h3>Cloud Authentication</h3>
+                    <p>Email + GitHub OAuth via Supabase Auth. Your circuits are private by default, with cloud sync and API key access.</p>
                 </div>
             </div>
             <div style="text-align:center;margin-top:2.5rem;">
@@ -418,7 +421,7 @@ result = qs.run(circuit,
             <div class="section-header">
                 <span class="section-tag">Pricing</span>
                 <h2>Free to start. Scale when ready.</h2>
-                <p class="section-desc">QuantSDK is and will always be 100% open-source. Cloud platform pricing coming with TheQuantCloud GA launch.</p>
+                <p class="section-desc">QuantSDK is and will always be 100% open-source. Cloud Beta is free — sign up and start running quantum circuits today.</p>
             </div>
             <div class="pricing-grid">
                 <div class="pricing-card">
@@ -428,7 +431,7 @@ result = qs.run(circuit,
                     <ul class="pricing-features">
                         <li>✦ Full QuantSDK library</li>
                         <li>✦ 50+ quantum gates</li>
-                        <li>✦ Local simulator</li>
+                        <li>✦ Local simulator (25 qubits)</li>
                         <li>✦ Framework interop (Qiskit, Cirq, OpenQASM)</li>
                         <li>✦ 22 example notebooks</li>
                         <li>✦ Community support via GitHub</li>
@@ -437,19 +440,21 @@ result = qs.run(circuit,
                     <a href="https://github.com/TheQuantAI/quantsdk" class="btn btn-secondary" target="_blank" rel="noopener">Get Started Free</a>
                 </div>
                 <div class="pricing-card pricing-card-featured">
-                    <div class="pricing-tier">Cloud Platform</div>
-                    <div class="pricing-price"><span class="price-amount">Early Access</span></div>
-                    <p class="pricing-desc">Full cloud platform with managed backends, team features, and smart routing. Launching Q3 2026.</p>
+                    <div class="pricing-tier">Cloud Beta</div>
+                    <div class="pricing-price"><span class="price-amount">$0</span><span class="price-period">/month</span></div>
+                    <p class="pricing-desc">Full cloud platform with managed backends and intelligent routing. Live now — no credit card required.</p>
                     <ul class="pricing-features">
                         <li>✦ Everything in Open Source</li>
-                        <li>✦ QuantStudio web IDE (live now)</li>
-                        <li>✦ 8 managed quantum backends</li>
-                        <li>✦ Intelligent backend routing (QuantRouter)</li>
-                        <li>✦ Team collaboration & sharing</li>
-                        <li>✦ Job queuing & monitoring</li>
-                        <li>✦ Priority support & SLA</li>
+                        <li>✦ 60 min/month simulator time</li>
+                        <li>✦ $50 beta credits</li>
+                        <li>✦ 10 QPU tasks/month</li>
+                        <li>✦ 5 cloud backends (Aer, Cirq, PennyLane…)</li>
+                        <li>✦ QuantStudio web IDE</li>
+                        <li>✦ QuantRouter intelligent routing</li>
+                        <li>✦ REST API + Python SDK access</li>
+                        <li>✦ Dashboard & usage tracking</li>
                     </ul>
-                    <a href="mailto:saket@thequantai.in" class="btn btn-primary">Request Early Access</a>
+                    <a href="https://studio.thequantcloud.com/signup" class="btn btn-primary" target="_blank" rel="noopener">Sign Up Free →</a>
                 </div>
             </div>
         </div>
@@ -459,8 +464,8 @@ result = qs.run(circuit,
     <section class="section cta-section">
         <div class="container">
             <div class="cta-inner">
-                <h2>Start building quantum<br>applications today</h2>
-                <p>Install QuantSDK and run your first quantum circuit in under 60 seconds.</p>
+                <h2>Start running quantum circuits<br>on the cloud — free</h2>
+                <p>Sign up for TheQuantCloud Beta. Get $50 in credits, 60 min simulator time, and 5 quantum backends. No credit card required.</p>
                 <div class="cta-install">
                     <code>pip install thequantsdk</code>
                     <button class="copy-btn" title="Copy">
@@ -468,7 +473,8 @@ result = qs.run(circuit,
                     </button>
                 </div>
                 <div class="cta-actions">
-                    <a href="https://docs.thequantcloud.com" class="btn btn-primary">Read the Docs</a>
+                    <a href="https://studio.thequantcloud.com/signup" class="btn btn-primary" target="_blank" rel="noopener">Sign Up for Beta →</a>
+                    <a href="https://docs.thequantcloud.com/getting-started/cloud-quickstart/" class="btn btn-secondary">Cloud Quick Start</a>
                     <a href="https://github.com/TheQuantAI/quantsdk" class="btn btn-secondary" target="_blank" rel="noopener">View on GitHub</a>
                 </div>
             </div>
